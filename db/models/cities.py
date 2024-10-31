@@ -13,7 +13,4 @@ class CityModel(Base):
     longitude = Column(Float)
     targets = relationship("TargetModel", back_populates="cities")
 
-    countries = relationship(
-        "CountryModel",
-        back_populates="cities"
-    )
+    countries = relationship("CountryModel",back_populates="cities")

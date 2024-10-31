@@ -3,9 +3,10 @@ from flask import Flask
 from flask_graphql import GraphQLView
 
 from db.database import init_db, db_session, URL
+from types_1.mutation import Mutation
 from types_1.query import Query
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query, mutation=Mutation)
 
 app = Flask(__name__)
 app.debug = True
